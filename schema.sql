@@ -9,3 +9,8 @@ CREATE TABLE animals (
   weight_kg         NUMERIC,
   PRIMARY KEY(id)   
 );
+
+-- Vet clinic database: query and update animals table
+
+ALTER TABLE animals
+ADD COLUMN species VARCHAR;
