@@ -25,7 +25,7 @@ CREATE TABLE  owners (
 CREATE TABLE  species (
   id               INT GENERATED ALWAYS AS IDENTITY,
   name        VARCHAR(50),
-  PRIMARY KEY(id)  
+  PRIMARY KEY(id)
 );
 
 -- Remove column species
@@ -36,3 +36,12 @@ ALTER TABLE animals ADD FOREIGN KEY (species_id) REFERENCES species (id);
 -- Add column owner_id which is a foreign key referencing the owners table
 ALTER TABLE animals ADD COLUMN owners_id INT;
 ALTER TABLE animals ADD FOREIGN KEY (owners_id) REFERENCES owners (id);
+
+-- Create a table named vets
+CREATE TABLE vets (
+  id                    INT GENERATED ALWAYS AS IDENTITY,
+  name                  CHAR(50),
+  age                   INT,
+  date_of_graduation    DATE,
+  PRIMARY KEY(id)
+);
