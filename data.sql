@@ -41,3 +41,16 @@ UPDATE animals SET owners_id = 4 WHERE name = 'Squirtle';
 UPDATE animals SET owners_id = 4 WHERE name = 'Blossom';
 UPDATE animals SET owners_id = 5 WHERE name = 'Angemon';
 UPDATE animals SET owners_id = 5 WHERE name = 'Boarmon';
+
+-- Insert data for vets
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('William Tatcher', 45, '2000-4-23');
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Maisy Smith', 26, '2019-1-17');
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64, '1981-5-4');
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harkness', 38, '2008-6-8');
+-- Insert data for specialties
+INSERT INTO specializations (vet_id, species_id) VALUES (1, 1);
+INSERT INTO specializations (vet_id, species_id) VALUES (3, 2);
+INSERT INTO specializations (vet_id, species_id) VALUES (3, 1);
+INSERT INTO specializations (vet_id, species_id) VALUES (4, 2);
+-- Insert data for visits
+
