@@ -39,23 +39,20 @@ ALTER TABLE animals ADD FOREIGN KEY (owners_id) REFERENCES owners (id);
 
 -- Create a table named vets
 CREATE TABLE vets (
-  id                    INT GENERATED ALWAYS AS IDENTITY,
-  name                  CHAR(50),
-  age                   INT,
-  date_of_graduation    DATE,
+  id      INT GENERATED ALWAYS AS IDENTITY,
+  name    CHAR(50),
+  age SMALLINT,
+  date_of_graduation DATE,
   PRIMARY KEY(id)
 );
 
 CREATE TABLE specializations (
-    vet_id INT ,
-    species_id INT,
-    CONSTRAINT fk_species FOREIGN KEY(species_id) REFERENCES species(id),
-    CONSTRAINT fk_vets FOREIGN KEY(vet_id) REFERENCES vets(id)
+  vet_id INT REFERENCES vets (id) ON DELETE cascade ON UPDATE cascade,
+  specie_id INT REFERENCES species (id) ON DELETE cascade ON UPDATE cascade
 );
+
 CREATE TABLE visits (
-   animal_id INT ,
-    vet_id INT,
-    date_of_visit DATE,
-    CONSTRAINT fk_animals FOREIGN KEY(animal_id) REFERENCES animals(id),
-    CONSTRAINT fk_vets FOREIGN KEY(vet_id) REFERENCES vets(id)
+  animal_id INT REFERENCES animals (id) ON DELETE cascade ON UPDATE cascade,
+  vet_id INT REFERENCES vets (id) ON DELETE cascade ON UPDATE cascade,
+  date_of_visit DATE
 );
