@@ -18,7 +18,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 - GitHub: [@mahbubul14](https://github.com/mahbubul14)
 - Twitter: [@twitterhandle](https://twitter.com/mahbubul_14)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mahbubul-alam-20595/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mahbubul14/)
 
 ## 🤝 Contributing
 
